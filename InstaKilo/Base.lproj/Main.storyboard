@@ -42,8 +42,11 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <segments>
                                     <segment title="First"/>
-                                    <segment title="Second"/>
+                                    <segment title="Location"/>
                                 </segments>
+                                <connections>
+                                    <action selector="mySegmentedControlSwitched:" destination="BYZ-38-t0r" eventType="valueChanged" id="DFx-kx-FyS"/>
+                                </connections>
                             </segmentedControl>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="PD4-44-Yfc">
                                 <rect key="frame" x="16" y="64" width="343" height="559"/>
@@ -90,6 +93,7 @@
                     <navigationItem key="navigationItem" id="4oO-vZ-b14"/>
                     <connections>
                         <outlet property="myCollectionView" destination="PD4-44-Yfc" id="xKa-KK-aj1"/>
+                        <outlet property="mySegmentedControl" destination="tTt-Qd-Kjr" id="S6k-ua-ntM"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
