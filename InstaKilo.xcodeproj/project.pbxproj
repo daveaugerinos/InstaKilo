@@ -14,6 +14,8 @@
 		A29A39291E5E3E3200C8654F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A29A39281E5E3E3200C8654F /* Assets.xcassets */; };
 		A29A392C1E5E3E3200C8654F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A29A392A1E5E3E3200C8654F /* LaunchScreen.storyboard */; };
 		A29A39371E5E3E3200C8654F /* InstaKiloTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A29A39361E5E3E3200C8654F /* InstaKiloTests.m */; };
+		A29A39431E5E479000C8654F /* MyCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A29A39421E5E479000C8654F /* MyCollectionViewCell.m */; };
+		A29A39491E5E588300C8654F /* MyPhoto.m in Sources */ = {isa = PBXBuildFile; fileRef = A29A39481E5E588300C8654F /* MyPhoto.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +42,10 @@
 		A29A39321E5E3E3200C8654F /* InstaKiloTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = InstaKiloTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A29A39361E5E3E3200C8654F /* InstaKiloTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = InstaKiloTests.m; sourceTree = "<group>"; };
 		A29A39381E5E3E3200C8654F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A29A39411E5E479000C8654F /* MyCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyCollectionViewCell.h; sourceTree = "<group>"; };
+		A29A39421E5E479000C8654F /* MyCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyCollectionViewCell.m; sourceTree = "<group>"; };
+		A29A39471E5E588300C8654F /* MyPhoto.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MyPhoto.h; path = ../MyPhoto.h; sourceTree = "<group>"; };
+		A29A39481E5E588300C8654F /* MyPhoto.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MyPhoto.m; path = ../MyPhoto.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +91,10 @@
 				A29A39201E5E3E3200C8654F /* AppDelegate.m */,
 				A29A39221E5E3E3200C8654F /* ViewController.h */,
 				A29A39231E5E3E3200C8654F /* ViewController.m */,
+				A29A39471E5E588300C8654F /* MyPhoto.h */,
+				A29A39481E5E588300C8654F /* MyPhoto.m */,
+				A29A39411E5E479000C8654F /* MyCollectionViewCell.h */,
+				A29A39421E5E479000C8654F /* MyCollectionViewCell.m */,
 				A29A39251E5E3E3200C8654F /* Main.storyboard */,
 				A29A39281E5E3E3200C8654F /* Assets.xcassets */,
 				A29A392A1E5E3E3200C8654F /* LaunchScreen.storyboard */,
@@ -213,8 +223,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A29A39491E5E588300C8654F /* MyPhoto.m in Sources */,
 				A29A39241E5E3E3200C8654F /* ViewController.m in Sources */,
 				A29A39211E5E3E3200C8654F /* AppDelegate.m in Sources */,
+				A29A39431E5E479000C8654F /* MyCollectionViewCell.m in Sources */,
 				A29A391E1E5E3E3200C8654F /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
