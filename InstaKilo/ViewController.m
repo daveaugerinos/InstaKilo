@@ -9,6 +9,7 @@
 #import "ViewController.h"
 #import "MyCollectionViewCell.h"
 #import "MyPhoto.h"
+#import "MyHeaderCollectionReusableView.h"
 
 //#import "HeaderCollectionReusableView.h"
 //#import "FooterCollectionReusableView.h"
@@ -32,9 +33,9 @@
     MyPhoto *photo1 = [[MyPhoto alloc] initWithImage:[UIImage imageNamed:@"cat-0"] andSubject:@"Fluffy" andLocation:@"Vancouver"];
     MyPhoto *photo2 = [[MyPhoto alloc] initWithImage:[UIImage imageNamed:@"cat-1"] andSubject:@"Muffy" andLocation:@"Kelowna"];
     MyPhoto *photo3 = [[MyPhoto alloc] initWithImage:[UIImage imageNamed:@"cat-2"] andSubject:@"Stuffy" andLocation:@"Vancouver"];
-    MyPhoto *photo4 = [[MyPhoto alloc] initWithImage:[UIImage imageNamed:@"cat-3"] andSubject:@"Buffy" andLocation:@"Vancouver"];
-    MyPhoto *photo5 = [[MyPhoto alloc] initWithImage:[UIImage imageNamed:@"cat-4"] andSubject:@"Buffy" andLocation:@"Surrey"];
-    MyPhoto *photo6 = [[MyPhoto alloc] initWithImage:[UIImage imageNamed:@"cat-5"] andSubject:@"Ruffy" andLocation:@"Vancouver"];
+    MyPhoto *photo4 = [[MyPhoto alloc] initWithImage:[UIImage imageNamed:@"cat-3"] andSubject:@"Fluffy" andLocation:@"Vancouver"];
+    MyPhoto *photo5 = [[MyPhoto alloc] initWithImage:[UIImage imageNamed:@"cat-4"] andSubject:@"Fluffy" andLocation:@"Surrey"];
+    MyPhoto *photo6 = [[MyPhoto alloc] initWithImage:[UIImage imageNamed:@"cat-5"] andSubject:@"Zuffy" andLocation:@"Vancouver"];
     MyPhoto *photo7 = [[MyPhoto alloc] initWithImage:[UIImage imageNamed:@"cat-6"] andSubject:@"Huffy" andLocation:@"Victoria"];
     MyPhoto *photo8 = [[MyPhoto alloc] initWithImage:[UIImage imageNamed:@"cat-7"] andSubject:@"Wuffy" andLocation:@"Victoria"];
     MyPhoto *photo9 = [[MyPhoto alloc] initWithImage:[UIImage imageNamed:@"cat-8"] andSubject:@"Zuffy" andLocation:@"Vancouver"];
@@ -48,9 +49,6 @@
     self.photosByLocationDictionary = [[NSMutableDictionary alloc] init];
     
     [self sortPhotosIntoGroups:self.photosArray];
-    
-    NSLog(@"Subjects: %@", self.photosBySubjectDictionary);
-    NSLog(@"Location: %@", self.photosByLocationDictionary);
 }
 
 
@@ -63,9 +61,6 @@
     
     // Iterate through photo array
     for (MyPhoto *photo in mutableArray) {
-        
-        NSLog(@"photo.subject %@", photo.subject);
-        NSLog(@"photo.location %@", photo.location);
         
         [NSString stringWithString:photo.subject];
         
@@ -154,8 +149,6 @@
         cell.myPhoto = photos[indexPath.row];
     }
     
-//    UILabel *label = (UILabel*)[cell viewWithTag:100];
-//    label.text = [NSString stringWithFormat:@"%ld/%ld", (long)indexPath.section, (long)indexPath.item];
     return cell;
 }
 
@@ -166,14 +159,33 @@
 }
 
 
-//-(UICollectionReusableView *)collectionView:(UICollectionView *)collectionView viewForSupplementaryElementOfKind:(NSString *)kind atIndexPath:(NSIndexPath *)indexPath{
-//    
-//    if ([kind isEqualToString:UICollectionElementKindSectionHeader]) {
-//        HeaderCollectionReusableView *headerView = [collectionView dequeueReusableSupplementaryViewOfKind:kind withReuseIdentifier:@"headerView" forIndexPath:indexPath];
-//        headerView.sectionLabel.text = [NSString stringWithFormat:@"%ld", (long)indexPath.section];
-//        return headerView;
-//    }
-//    return nil;
-//}
+-(UICollectionReusableView *)collectionView:(UICollectionView *)collectionView viewForSupplementaryElementOfKind:(NSString *)kind atIndexPath:(NSIndexPath *)indexPath{
+    
+    if ([kind isEqualToString:UICollectionElementKindSectionHeader]) {
+        
+        MyHeaderCollectionReusableView *headerView = [collectionView dequeueReusableSupplementaryViewOfKind:kind withReuseIdentifier:@"headerView" forIndexPath:indexPath];
+        
+        // Check which side of segmented control is active
+        if(self.mySegmentedControl.selectedSegmentIndex == 0) {
+            
+            // Get all keys for subject dict and string of key in array to determine section header label
+            NSArray *keys = [self.photosBySubjectDictionary allKeys];
+            NSString *mySubject = keys[indexPath.section];
+            headerView.headerSectionLabel.text = [NSString stringWithFormat:@"%@", mySubject];
+        }
+        
+        else {
+            
+            // Get all keys for location dict and string of key in array to determine section header label
+            NSArray *keys = [self.photosByLocationDictionary allKeys];
+            NSString *myLocation = keys[indexPath.section];
+            headerView.headerSectionLabel.text = [NSString stringWithFormat:@"%@", myLocation];
+        }
+        
+        return headerView;
+        
+    }
+    return nil;
+}
 
 @end

@@ -16,6 +16,7 @@
 		A29A39371E5E3E3200C8654F /* InstaKiloTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A29A39361E5E3E3200C8654F /* InstaKiloTests.m */; };
 		A29A39431E5E479000C8654F /* MyCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A29A39421E5E479000C8654F /* MyCollectionViewCell.m */; };
 		A29A39491E5E588300C8654F /* MyPhoto.m in Sources */ = {isa = PBXBuildFile; fileRef = A29A39481E5E588300C8654F /* MyPhoto.m */; };
+		A29A39801E5E977C00C8654F /* MyHeaderCollectionReusableView.m in Sources */ = {isa = PBXBuildFile; fileRef = A29A397F1E5E977C00C8654F /* MyHeaderCollectionReusableView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +47,8 @@
 		A29A39421E5E479000C8654F /* MyCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyCollectionViewCell.m; sourceTree = "<group>"; };
 		A29A39471E5E588300C8654F /* MyPhoto.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MyPhoto.h; path = ../MyPhoto.h; sourceTree = "<group>"; };
 		A29A39481E5E588300C8654F /* MyPhoto.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MyPhoto.m; path = ../MyPhoto.m; sourceTree = "<group>"; };
+		A29A397E1E5E977C00C8654F /* MyHeaderCollectionReusableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyHeaderCollectionReusableView.h; sourceTree = "<group>"; };
+		A29A397F1E5E977C00C8654F /* MyHeaderCollectionReusableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyHeaderCollectionReusableView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +99,8 @@
 				A29A39411E5E479000C8654F /* MyCollectionViewCell.h */,
 				A29A39421E5E479000C8654F /* MyCollectionViewCell.m */,
 				A29A39251E5E3E3200C8654F /* Main.storyboard */,
+				A29A397E1E5E977C00C8654F /* MyHeaderCollectionReusableView.h */,
+				A29A397F1E5E977C00C8654F /* MyHeaderCollectionReusableView.m */,
 				A29A39281E5E3E3200C8654F /* Assets.xcassets */,
 				A29A392A1E5E3E3200C8654F /* LaunchScreen.storyboard */,
 				A29A392D1E5E3E3200C8654F /* Info.plist */,
@@ -227,6 +232,7 @@
 				A29A39241E5E3E3200C8654F /* ViewController.m in Sources */,
 				A29A39211E5E3E3200C8654F /* AppDelegate.m in Sources */,
 				A29A39431E5E479000C8654F /* MyCollectionViewCell.m in Sources */,
+				A29A39801E5E977C00C8654F /* MyHeaderCollectionReusableView.m in Sources */,
 				A29A391E1E5E3E3200C8654F /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
